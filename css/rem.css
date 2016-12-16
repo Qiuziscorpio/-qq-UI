@@ -1,0 +1,133 @@
+@charset "UTF-8";
+html,
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "微软雅黑";
+  min-width: 320px;
+}
+
+.q-main {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.q-main .q-head {
+  width: 100%;
+  height: 3.41333rem;
+  background: #12b7f5;
+}
+
+.q-main .q-content {
+  flex: 1;
+  overflow: scroll;
+}
+
+.q-main .q-content .q-search {
+  padding: 0.42667rem;
+}
+
+.q-main .q-content .q-search input {
+  text-align: center;
+  font-size: 0.69333rem;
+  background: #eeeff3;
+  border: none;
+  width: 100%;
+  padding: 0.37333rem 0;
+  border-radius: 0.21333rem;
+}
+
+.q-main .q-content .q-session {
+  padding: 0.42667rem 0 0.42667rem 0.42667rem;
+}
+
+.q-main .q-content .q-session .q-session-list {
+  display: flex;
+  align-items: center;
+}
+
+.q-main .q-content .q-session .q-session-list .q-portrait {
+  flex: 0 0 2.66667rem;
+  border-radius: 50%;
+  margin-left: 0.21333rem;
+  margin-right: 0.64rem;
+}
+
+.q-main .q-content .q-session .q-session-list .q-portrait img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.q-main .q-content .q-session .q-session-list .q-chat {
+  flex: 1;
+  padding: 0.64rem 0.64rem 0.64rem 0;
+  border-bottom: 1px solid #dedfe0;
+}
+
+.q-main .q-content .q-session .q-session-list .q-chat .chat-head,
+.q-main .q-content .q-session .q-session-list .q-chat .chat-news {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.q-main .q-content .q-session .q-session-list .q-chat .chat-head .title {
+  font-size: 0.8rem;
+  color: #010101;
+}
+
+.q-main .q-content .q-session .q-session-list .q-chat .chat-head .time {
+  font-size: 0.53333rem;
+  color: #ababab;
+}
+
+.q-main .q-content .q-session .q-session-list .q-chat .chat-news {
+  margin-top: 0.32rem;
+}
+
+.q-main .q-content .q-session .q-session-list .q-chat .chat-news .subtitle {
+  font-size: 0.64rem;
+  color: #777777;
+}
+
+.q-main .q-content .q-session .q-session-list .q-chat .chat-news .number {
+  height: 1.06667rem;
+  font-size: 0.53333rem;
+  text-align: center;
+  padding: 0 0.29333rem;
+  line-height: 1.01333rem;
+  border-radius: 20rem;
+  background: #f74c31;
+  color: #fff;
+}
+
+.q-main .q-footnav {
+  display: flex;
+  border-top: 1px solid #bfbfbf;
+  font-size: 0.53333rem;
+  color: #828282;
+  text-align: center;
+  padding: 0.21333rem 0;
+}
+
+.q-main .q-footnav .nav-list {
+  flex: 1;
+}
+
+.q-main .q-footnav .nav-list i {
+  font-size: 1.46667rem;
+  color: #7f8393;
+}
+
+.q-main .q-footnav .active,
+.q-main .q-footnav .active i {
+  color: #12b7f5;
+}

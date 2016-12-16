@@ -1,0 +1,121 @@
+html,
+body,
+div,
+img {
+    margin: 0;
+    padding: 0;
+}
+//初始配置
+html {
+    font-size: 16px;
+    font-family: "微软雅黑";
+    min-width: 320px;
+}
+//px转换rem
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px/$rem) +rem;
+}
+.q-main {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    //头部
+    .q-head {
+        width: 100%;
+        height: px2rem(128px);
+        background: #12b7f5;
+    }
+    .q-content {
+        flex: 1;
+        overflow: scroll;
+        .q-search {
+            padding: px2rem(16px);
+            input {
+                text-align: center;
+                font-size: px2rem(26px);
+                background: #eeeff3;
+                border: none;
+                width: 100%;
+                padding: px2rem(14px) 0;
+                border-radius: px2rem(8px);
+            }
+        }
+        .q-session {
+            padding: px2rem(16px) 0 px2rem(16px) px2rem(16px);
+            .q-session-list {
+                display: flex;
+                align-items: center;
+                .q-portrait {
+                    flex: 0 0 px2rem(100px);
+                    border-radius: 50%;
+                    margin-left: px2rem(8px);
+                    margin-right: px2rem(24px);
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+                .q-chat {
+                    flex: 1;
+                    padding: px2rem(24px) px2rem(24px) px2rem(24px) 0;
+                    border-bottom: 1px solid #dedfe0;
+                    .chat-head,
+                    .chat-news {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .chat-head {
+                        .title {
+                            font-size: px2rem(30px);
+                            color: #010101;
+                        }
+                        .time {
+                            font-size: px2rem(20px);
+                            color: #ababab;
+                        }
+                    }
+                    .chat-news {
+                        margin-top: px2rem(12px);
+                        .subtitle {
+                            font-size: px2rem(24px);
+                            color: #777777;
+                        }
+                        .number {
+                            height: px2rem(40px);
+                            font-size: px2rem(20px);
+                            text-align: center;
+                            padding: 0 px2rem(11px);
+                            line-height: px2rem(38px);
+                            border-radius: 20rem;
+                            background: #f74c31;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //底部菜单
+    .q-footnav {
+        display: flex;
+        border-top: 1px solid #bfbfbf;
+        font-size: px2rem(20px);
+        color: #828282;
+        text-align: center;
+        padding: px2rem(8px) 0;
+        .nav-list {
+            flex: 1;
+            i {
+                font-size:px2rem(55px) ;
+                color: #7f8393;
+            }
+        }
+        .active ,
+        .active i{
+            color: #12b7f5;
+        }
+    }
+}
