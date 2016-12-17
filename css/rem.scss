@@ -16,6 +16,7 @@ html {
     $rem: 37.5px;
     @return ($px/$rem) +rem;
 }
+
 .q-main {
     height: 100vh;
     display: flex;
