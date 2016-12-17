@@ -63,7 +63,7 @@ html {
     //聊天信息
     .q-content {
         flex: 1;
-        overflow: scroll;
+        overflow-y: scroll;
         .q-search {
             position: relative;
             padding: px2rem(16px);
