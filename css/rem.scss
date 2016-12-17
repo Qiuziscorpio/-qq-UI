@@ -22,14 +22,50 @@ html {
     flex-flow: column;
     //头部
     .q-head {
-        width: 100%;
+        padding: 0 px2rem(24px);
         height: px2rem(128px);
+        display: flex;
         background: #12b7f5;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        .head-portrait{
+            width:px2rem(74px);
+            height: px2rem(74px);
+            border-radius:50% ;
+            img{
+                max-width: 100%;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        .head-nav{
+            font-size: px2rem(26px);
+            border: 1px solid #fff;
+            border-radius:px2rem(8px);
+            .btn{
+                padding: px2rem(15px) 0;
+                width: px2rem(116px);
+                text-align: center;
+                display: inline-block;
+            }
+            .active{
+                background: #fff;
+                color: #12b7f5;
+            }
+        }
+        .head-add{
+            i{
+                 font-size: px2rem(50px);
+            }
+        }
     }
+    //聊天信息
     .q-content {
         flex: 1;
         overflow: scroll;
         .q-search {
+            position: relative;
             padding: px2rem(16px);
             input {
                 text-align: center;
@@ -39,6 +75,12 @@ html {
                 width: 100%;
                 padding: px2rem(14px) 0;
                 border-radius: px2rem(8px);
+            }
+            i.icon-sousuo{
+                position: absolute;
+                left: 42%;
+                top: 30%;
+                color: #c7c7cc;
             }
         }
         .q-session {
@@ -58,9 +100,9 @@ html {
                     }
                 }
                 .q-chat {
+                    position: relative;
                     flex: 1;
                     padding: px2rem(24px) px2rem(24px) px2rem(24px) 0;
-                    border-bottom: 1px solid #dedfe0;
                     .chat-head,
                     .chat-news {
                         display: flex;
@@ -95,6 +137,16 @@ html {
                         }
                     }
                 }
+                .q-chat:after{
+                    width: 100%;
+                    content:"";
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    -webkit-transform:scaleY(.5);
+                    -webkit-transform-origin:0 0;                    
+                    border-bottom:px2rem(1px) solid #dedfe0;
+                }
             }
         }
     }
@@ -109,8 +161,22 @@ html {
         .nav-list {
             flex: 1;
             i {
+                position: relative;
                 font-size:px2rem(55px) ;
                 color: #7f8393;
+            }
+            .radius-number{
+                position: absolute;
+                left: 85%;
+                top: -10%;
+                min-height:px2rem(20px) ;
+                font-size: px2rem(20px);
+                text-align: center;
+                padding: 0 px2rem(11px);
+                line-height: px2rem(38px);
+                border-radius: 20rem;
+                background: #f74c31;
+                color: #fff;                
             }
         }
         .active ,
